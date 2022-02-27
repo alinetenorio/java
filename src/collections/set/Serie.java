@@ -4,14 +4,18 @@ public class Serie implements Comparable<Serie> {
   //Ao usar implementações que usem Hash, é preciso
   //sobreescrever o equals() e o hash()
 
-  String nome;
-  String genero;
-  Integer tempoEpisodio;
+  public String nome;
+  public String genero;
+  public Integer tempoEpisodio;
 
   public Serie(String n, String g, Integer t) {
     this.nome = n;
     this.genero = g;
     this.tempoEpisodio = t;
+  }
+
+  public Serie(String n) {
+    this.nome = n;
   }
 
   @Override
@@ -62,4 +66,5 @@ public class Serie implements Comparable<Serie> {
     return Integer.compare(this.tempoEpisodio, o.tempoEpisodio);
   }
   
+
 }
